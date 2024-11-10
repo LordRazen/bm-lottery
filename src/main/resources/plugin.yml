@@ -1,0 +1,19 @@
+name: ChestSummoner
+version: 1.0
+main: de.blockminers.verlosung.ChestSummoner
+commands:
+  lottery-markcontainer:
+    description: Marks a container location for the lottery.
+    usage: /<command> <container_type>
+  lottery-spawn-location:
+    description: Sets the spawn location for the summoned item.
+    usage: /<command>
+  lottery-draw:
+    description: Randomly draws an item from marked containers.
+    usage: /<command>
+  lottery-enable:
+    description: Enables the plugin to perform.
+    usage: /<command>
+  lottery-disable:
+    description: Disables the plugin and clears data.
+    usage: /<command>

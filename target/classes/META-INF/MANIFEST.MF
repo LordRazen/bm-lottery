@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Built-By: dvand
+Build-Jdk: 21.0.5
+Implementation-Title: ChestSummoner
+Implementation-Version: 1.0
+Implementation-Vendor-Id: de.blockminers.verlosung
+Created-By: Maven Integration for Eclipse
+
