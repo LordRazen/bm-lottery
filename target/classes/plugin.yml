@@ -18,6 +18,6 @@ commands:
     description: Disables the plugin and clears data.
     usage: /<command>
 permissions:
-	lottery.main:
-	description: Allows the player to use standard plugin commands
-	default: false
+  lottery.main:
+    description: Allows the player to use standard plugin commands
+    default: false

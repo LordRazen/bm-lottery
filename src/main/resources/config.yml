@@ -1,11 +1,11 @@
 spawnLocation:
-	vectorx: 0
-	vectory: 3
-	vectorz: 0
+    vectorx: 0
+    vectory: 3
+    vectorz: 0
 itemfallspeed:
-	velocityx: 0
-	velocityx: -0.5
-	velocityx: 0
+    velocityx: 0
+    velocityx: -0.5
+    velocityx: 0
 particle-effect: HAPPY_VILLAGER
 #Possible Effects: ANGRY_VILLAGER,ELECTRIC_SPARK,SNOWFLAKE,SHRIEK,HEART_PARTICLE,EXPLOSION_EMITTER, also others as long as they rely on the same Syntax
 repeats: 1
@@ -14,4 +14,4 @@ particle-offsetX: 0.5
 particle-offsetY: 0.5
 particle-offsetZ: 0.5
 particle-speed: 0.1
-	
+
