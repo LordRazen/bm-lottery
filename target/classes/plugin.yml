@@ -1,6 +1,6 @@
-name: ChestSummoner
-version: 1.0
-main: de.blockminers.verlosung.ChestSummoner
+name: Lottery
+version: 2.0
+main: de.blockminers.verlosung.Lottery
 commands:
   lottery-markcontainer:
     description: Marks a container location for the lottery.
@@ -17,3 +17,7 @@ commands:
   lottery-disable:
     description: Disables the plugin and clears data.
     usage: /<command>
+permissions:
+	lottery.main:
+	description: Allows the player to use standard plugin commands
+	default: false
