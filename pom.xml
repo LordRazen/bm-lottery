@@ -3,19 +3,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.blockminers.verlosung</groupId>
-    <artifactId>chestsummoner</artifactId>
-    <version>1.0</version>
+    <artifactId>Lottery</artifactId>
+    <version>2.0</version>
     <packaging>jar</packaging>
 
-    <name>ChestSummoner</name>
-    <description>A Minecraft plugin to summon items with effects from marked chests</description>
+    <name>Lottery</name>
+    <description>A Minecraft plugin to summon items with effects from marked Containers</description>
 
-    <!-- Java-Version (ersetze ggf. mit der Version, die du verwendest) -->
     <properties>
         <java.version>21</java.version>
     </properties>
 
-    <!-- Dependencies für das Projekt -->
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
@@ -25,7 +23,6 @@
         </dependency>
     </dependencies>
 
-    <!-- Repository für Spigot, falls es nicht automatisch gefunden wird -->
     <repositories>
         <repository>
             <id>spigotmc-repo</id>
@@ -33,10 +30,8 @@
         </repository>
     </repositories>
 
-    <!-- Build-Informationen -->
     <build>
         <plugins>
-            <!-- Compiler-Plugin, das sicherstellt, dass Java 1.8 verwendet wird -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -47,7 +42,6 @@
                 </configuration>
             </plugin>
 
-            <!-- Plugin zum Erstellen einer .jar-Datei -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
