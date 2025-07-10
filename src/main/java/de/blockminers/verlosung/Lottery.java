@@ -23,11 +23,11 @@ public class Lottery extends JavaPlugin {
 		saveDefaultConfig();
         config = getConfig();
 		// Register commands
-		getCommand("lottery-markcontainer").setExecutor(this::markContainer);
-		getCommand("lottery-spawn-location").setExecutor(this::setSpawnLocation);
-		getCommand("lottery-draw").setExecutor(this::drawLottery);
-		getCommand("lottery-enable").setExecutor(this::enablePlugin);
-		getCommand("lottery-disable").setExecutor(this::disablePlugin);
+		Objects.requireNonNull(getCommand("lottery-markcontainer")).setExecutor(this::markContainer);
+		Objects.requireNonNull(getCommand("lottery-spawn-location")).setExecutor(this::setSpawnLocation);
+		Objects.requireNonNull(getCommand("lottery-draw")).setExecutor(this::drawLottery);
+		Objects.requireNonNull(getCommand("lottery-enable")).setExecutor(this::enablePlugin);
+		Objects.requireNonNull(getCommand("lottery-disable")).setExecutor(this::disablePlugin);
 	}
 
 	// Command to mark a container (chest, barrel, etc.)
@@ -157,9 +157,9 @@ public class Lottery extends JavaPlugin {
 		}
 		
 
-		// Spawn the item 3 blocks above the set location
+		// Spawn the item offset variable from the config from the set location
 		Location itemLocation = spawnLocation.clone().add(config.getDouble("spawnlocation.vectorx"),config.getDouble("spawnlocation.vectory"),config.getDouble("spawnlocation.vectorz"));
-		Item droppedItem = itemLocation.getWorld().dropItem(itemLocation, item);
+		Item droppedItem = Objects.requireNonNull(itemLocation.getWorld()).dropItem(itemLocation, item);
 		droppedItem.setVelocity(new Vector(config.getDouble("itemfallspeed.velocityx"),config.getDouble("itemfallspeed.velocityy"),config.getDouble("itemfallspeed.velocityz"))); // Make the item fall slowly
 
 		// Add  particles  at the item's location
