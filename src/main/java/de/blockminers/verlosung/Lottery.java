@@ -145,6 +145,7 @@ public class Lottery extends JavaPlugin {
 		chosenContainer.setItem(randomSlotIndex, null);
 
 		// Spawn the item at the spawn location
+
 		spawnItem(chosenItem);
 
 		return true;
@@ -158,9 +159,18 @@ public class Lottery extends JavaPlugin {
 		
 
 		// Spawn the item offset variable from the config from the set location
-		Location itemLocation = spawnLocation.clone().add(config.getDouble("spawnlocation.vectorx"),config.getDouble("spawnlocation.vectory"),config.getDouble("spawnlocation.vectorz"));
+		Location itemLocation = spawnLocation.clone().add(
+				getConfig().getDouble("spawnlocation.vectorx"),
+				getConfig().getDouble("spawnlocation.vectory"),
+				getConfig().getDouble("spawnlocation.vectorz")
+		);
 		Item droppedItem = Objects.requireNonNull(itemLocation.getWorld()).dropItem(itemLocation, item);
-		droppedItem.setVelocity(new Vector(config.getDouble("itemfallspeed.velocityx"),config.getDouble("itemfallspeed.velocityy"),config.getDouble("itemfallspeed.velocityz"))); // Make the item fall slowly
+		droppedItem.setVelocity(new Vector(
+				getConfig().getDouble("itemfallspeed.velocityx"),
+				getConfig().getDouble("itemfallspeed.velocityy"),
+				getConfig().getDouble("itemfallspeed.velocityz")
+		));
+
 
 		// Add  particles  at the item's location
 		String particleName = getConfig().getString("particle-effect", "HAPPY_VILLAGER");
@@ -173,9 +183,10 @@ public class Lottery extends JavaPlugin {
         }
 
 		
-		int count = config.getInt("particle.repeats");
-		for (int i = 0; i < count; count++)
+		int count = config.getInt("repeats");
+		for (int i = 0; i < count; i++)
 		itemLocation.getWorld().spawnParticle(particle, droppedItem.getLocation(), config.getInt("particle-count"), config.getDouble("particle-offsetX"), config.getDouble("particle-offsetY"), config.getDouble("particle-offsetZ"),
 				config.getDouble("particle-speed"));
+		System.out.println(itemLocation);
 	}
 }
